@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Dashboard</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css1.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <i><img class="logopic" src="/image-removebg-preview.png" alt=""></i>
+            <span><h4>SYS MART</h4> <h6>combines system and mart</h6></span>
+            
+        </div>
+        
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-shopping-bag'></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cart'></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-user'></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="bottom-links">
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog'></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-help-circle'></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <!-- Top Navigation Bar -->
+        <nav class="top-nav">
+            <div class="search-bar">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            
+            <div class="nav-right">
+                <button class="notification-btn">
+                    <i class='bx bxs-bell'></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="profile">
+                    <i class='bx bxs-user'></i>
+                   
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Total Revenue</h3>
+                        <p class="stat-value">$24,780</p>
+                        <span class="trend positive">+12.5%</span>
+                    </div>
+                    <div class="stat-icon">
+                        <i class='bx bxs-dollar-circle'></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Total Orders</h3>
+                        <p class="stat-value">1,463</p>
+                        <span class="trend positive">+8.2%</span>
+                    </div>
+                    <div class="stat-icon">
+                        <i class='bx bxs-shopping-bags'></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Total Customers</h3>
+                        <p class="stat-value">892</p>
+                        <span class="trend positive">+5.7%</span>
+                    </div>
+                    <div class="stat-icon">
+                        <i class='bx bxs-group'></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <h3>Avg. Order Value</h3>
+                        <p class="stat-value">$168</p>
+                        <span class="trend negative">-2.3%</span>
+                    </div>
+                    <div class="stat-icon">
+                        <i class='bx bxs-badge-dollar'></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                <div class="chart-card large">
+                    <h3>Sales Overview</h3>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Top Products</h3>
+                    <div class="chart-container">
+                        <canvas id="productsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Customer Growth</h3>
+                    <div class="chart-container">
+                        <canvas id="customersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="recent-orders">
+                <h3>Recent Orders</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-001</td>
+                                <td>Sarah Johnson</td>
+                                <td>Premium Headphones</td>
+                                <td>$299</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-002</td>
+                                <td>Mike Smith</td>
+                                <td>Wireless Mouse</td>
+                                <td>$49</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-003</td>
+                                <td>Emily Brown</td>
+                                <td>Gaming Monitor</td>
+                                <td>$599</td>
+                                <td><span class="status processing">Processing</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/new1.js"></script>
+    
+</body>
+</html>
